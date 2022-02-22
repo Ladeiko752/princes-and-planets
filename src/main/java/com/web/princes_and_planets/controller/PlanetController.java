@@ -40,7 +40,7 @@ public class PlanetController {
         return "Planet with ID = " + id + " was deleted";
     }
 
-    @PostMapping("/planets/{id}")
+    @PostMapping("/planets/entrust/{id}")
     public Planet entrustControlPlanet(@PathVariable int id, @RequestBody Prince prince) throws Exception {
         Planet planet = planetService.entrustManagement(id, prince);
         planetService.savePlanet(planet);
